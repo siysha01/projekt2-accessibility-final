@@ -1,0 +1,964 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* .... general sætning */
+
+body{
+background-color: #FAFAF7;
+font-family: Inter, Playfair Display, sans-serif;
+
+}
+
+h1{
+    font-family: Playfair Display ;
+    font-size: 35px;
+}
+ h2, h3, h4, h5{
+    font-family: Inter;
+    font-size: 25px;
+    padding-bottom: 1rem;
+ }
+
+ p, a{
+    font-size: 1rem;
+    line-height: 1.4;
+ }
+
+ p{
+    padding-bottom: 0.5rem;
+ }
+
+
+ 
+ span{
+    font-size: 15px;
+ }
+
+ button{
+    font-size: 1rem;
+ }
+
+ /* ----------------- header ----------*/
+ .logo img{
+     height:95px;
+    width: auto;
+    float: left;
+   padding-left: 25px;
+   }
+ .logo p{
+    color: #f2f8f7;
+   text-decoration: none;
+   font-family: Inter;
+   font-size: 18px;
+   font-weight: bold;
+        padding: 10px;
+     display: flex;
+     margin-top: 25px;
+   
+ }
+ 
+
+
+ header{
+    
+    background-color: #13463F;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    margin-bottom: 25px;
+    box-shadow: 0 1px 8px #000000;
+ }
+
+
+nav ul{
+    padding: 0;
+
+}
+ 
+nav li{
+    display: inline;
+    padding: 0 0.5rem;
+    float: left;
+    margin-right: 10px;
+}
+ 
+li a{
+    color: #e8efe2;
+    font-family: Inter;
+    font-size: large;
+    text-decoration: none;
+}
+
+
+ li a:hover{
+      font-weight: bolder;
+ }
+ 
+
+.nav-action{
+    display: flex;
+     align-items: center;
+    gap: 15px;
+}
+.nav-action .søg{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+      height: 25px;
+    width: 150px;
+    border-radius: 45px;
+ }
+
+.nav-action img{
+    height: 20px;
+    width: auto;
+    gap: 15px;
+    padding-right: 35px;
+}
+
+/* ------------------- banner indhold --------------*/
+
+.banner{
+    background-color: #e8efe2;
+    position: relative;
+    max-width: 1440px;
+    width: 90%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+      
+   margin: 0 auto 30px auto;
+ 
+    
+}
+.banner img{
+    display: block;
+  width: 70%;
+    height: 100%;
+ float: right;
+ margin-left: auto;
+ object-fit: cover;
+ object-position:center right;
+ mask-image: linear-gradient(to right, transparent 5%, black 45%);/* ...... for at slør banner billede kant ....*/
+ 
+     
+  }
+
+.banner-indhold{
+     position: absolute; 
+    top: 50%;
+    left: 45%;
+    transform: translate(-40%, -40%);
+    text-align: center;
+    color: #000000;
+    width: 100%;
+    
+}
+
+.banner-indhold h1{
+    text-align: left;
+    
+     margin-bottom: 15px;
+      font-size: 5rem;
+    font-weight: bolder;
+    
+}
+.banner-indhold h2{
+    text-align: left;
+    font-size: 3rem;
+    font-weight: bold;
+   margin-bottom: 15px;
+    
+}
+
+.banner-indhold p{
+        text-align: left;
+    font-weight: bold;
+    margin-bottom: 25px;
+    margin-right: 20px;
+     
+    
+}
+
+.inspireret-tips{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    margin-left: 150px;
+}
+
+
+   .inspireret-tips  .knap {
+      font-family: Inter;
+    font-size: 24px;
+     display: inline-flex;
+ align-items: center; 
+    border: none;
+   background-color: #536C5A;
+     height: 40px;
+    border-radius: 50px;
+    padding: 12px 28px;
+    width: fit-content;
+     
+   
+
+
+}
+ .inspireret-tips   a{
+    text-decoration: none;
+      font-family: Inter;
+    font-size: 24px;
+     display: flex;
+  text-align: center; 
+    border: none;
+     color: #f4f0f0;
+      
+     
+
+
+}
+ .inspireret-tips   a:hover{
+    font-weight: bolder;
+ 
+}
+
+
+/* ------ de tre genbrug, grønne vaner og mindre madpild korter---*/
+
+.ikoner{
+   
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-wrap: wrap;
+    float: right;
+    gap: 25px;
+    margin: 15px 110px 35px auto;
+
+}
+
+
+.ikon{
+    align-items: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ 
+}
+
+.ikon img{
+      height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    display: block;
+    background-color: #FAFAF7;
+    box-shadow: 2px 4px 8px #000000; 
+    margin-bottom: 5px;
+
+
+     
+}
+  
+.ikon p{
+    font-size:12px;
+    color: #000;
+    line-height: 1.2;
+    margin-top: 5px;
+   margin-bottom: 10px;
+   align-items: center;
+    
+
+}
+ 
+ 
+ 
+
+                        /*-------- vigtiste artikler ---------*/
+ .artikler{
+    
+      width: 95%;
+    max-width: 1300px;
+    margin: 0 25px;
+    padding: 0 0 25px;
+     
+
+ } 
+                       
+.artikler-header{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 20px 0 20px 30px;
+      
+}
+
+.artikler-header h2{
+    font-family: Playfair Displayr;
+    font-size: 24px;
+    margin: 25px 25px;
+     
+}
+
+.artikler-header a{
+    
+    font-size: 16px ;
+    text-decoration: none;
+    color: #000000;
+    background-color: #bbc2c0;
+    width: 150px;
+    box-sizing: border-box;
+    height: 30px;
+    border-radius: 50px;
+   text-align: center;
+   padding-top: 5px;
+           
+}
+.artikler-header a:hover{
+   font-size: large;
+    font-weight: bolder;
+         
+}
+
+ 
+
+ /*..............  artikler grid .........*/
+
+.artikler-flexbox{
+    display: grid;
+    grid-template-columns: 1.2fr 2.5fr;
+    gap: 25px;
+    width: 100%;
+    margin-bottom: 25px;
+    align-items: start;
+}
+
+ 
+/*.........  hjemmet, Transport, mad & indkøb  og forbrug ....*/
+
+.artikler-hjemmet{
+    grid-column: 1;
+     flex-direction: column;
+    border-radius: 10px;
+     justify-content: space-between;
+     display: flex;
+     width: 400px;
+     height: auto;
+   background-color: #F7F5EE;
+   box-shadow: 0 4px 8px black;
+  transition: 0.5s ease;
+  box-sizing: border-box;
+   flex-wrap: wrap;
+   padding: 15px;
+       
+}
+.hjemmet-img{
+    height: 250px;
+    width: 100%;
+    
+}
+ 
+.hjemmet-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.hjemmet-indhold{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 15px;
+}
+.hjemmet-indhold span{
+    display: inline-block;
+    padding: 5px 10px;
+    width: 100px;
+    height: 30px;
+    background-color:#9bbd8e;
+    color: #040000;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 20px;
+     margin-left: 25px;
+     margin-bottom: 10px;
+      
+
+}
+
+ .hjemmet-indhold h2{
+    font-size: 18;
+    color: #000;
+    margin-top: 20px;
+    text-align: center;
+    
+
+
+}
+  .hjemmet-indhold p{
+    color: #000;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+     margin-left: 15px;
+ 
+}
+.hjemmet-indhold a{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    align-self: flex-end;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+ 
+
+.hjemmet-indhold a:hover{
+    font-weight: bolder;
+    color: #0977ed;
+}
+
+/*.......... sideartikler ...........*/
+.sideartikler{
+    display: grid;
+   grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    width: 100%;
+}
+/*........ Transport ..........*/
+
+.sideartikler-Transport{
+     display: flex;
+     flex-direction: column;
+      border: none;
+    border-radius: 15px;
+  width: 300px;
+    height: auto;
+     transition: 0.3s ease;
+    justify-content: space-between;
+    background-color: #E9ECE4;
+    padding: 15px;
+    box-sizing: border-box;
+    
+      
+ }
+  
+ 
+.sideartikler-Transport img{
+     height: 200px;
+    width:100٪;
+    border-radius: 10px;
+   object-fit: cover; 
+
+         
+}
+.Transport-indhold{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.Transport-indhold h2{
+        color: #000;
+    margin-top: 10px;
+    font-size: 25px;
+      text-align: center;
+    
+
+}
+.Transport-indhold p{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    margin-top: 8px;
+    line-height: 1.2;
+
+}
+.Transport-indhold a{
+    text-decoration: none;
+    align-self: flex-end;
+    float: right;
+    padding-right: 10px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.Transport-indhold a:hover{
+    font-weight: bolder;
+    color: #0977ed;
+}
+.Transport-indhold span{
+     display: inline-block;
+         padding: 5px 10px;
+    width: 120px;
+    height: 30px;
+    background-color:#9bbd8e;
+    color: #040000;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 20px;
+     margin-left: 15px;
+     margin-bottom: 10px;
+     margin-top: 10px;
+
+}
+
+ /*................. Mad & Indkøb ..........  */
+
+.sideartikler-mad{
+     display: flex;
+   flex-direction: column;
+ flex-wrap: wrap;
+ justify-content: space-between;
+      border: none;
+    border-radius: 15px;
+   width: 100%;
+    height: auto;
+         transition: 0.3s ease;
+    background-color: #E9ECE4;
+    padding: 15px;
+    gap: 15px; 
+    box-sizing: border-box;
+    
+      
+ }
+  
+ .sideartikler-mad-img img,
+.sideartikler-mad-img img{
+     height: 200px;
+    width: 100%;
+     border-radius: 10px;
+   object-fit: cover; 
+
+         
+}
+.mad-indhold{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.mad-indhold h2{
+            color: #000;
+    margin-bottom: 10px;
+    font-size: 25px;
+      text-align: center;
+
+}
+.mad-indhold p{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+    line-height: 1.2;
+
+}
+.mad-indhold a{
+    text-decoration: none;
+    align-items: flex-end;
+    float: right;
+    padding-right: 10px;
+    font-size: 18px;
+    margin-top: 18px;
+}
+.mad-indhold a:hover{
+    font-weight: bolder;
+    color: #0977ed;
+}
+.mad-indhold span{
+     display: inline-block;
+    padding: 5px 10px;
+    width: 155px;
+    height: 30px;
+    background-color:#9bbd8e;
+    color: #040000;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 20px;
+     margin-left: 15px;
+     margin-bottom: 10px;
+     margin-top: 10px;
+
+}
+
+  /*................ Forbrug ..................*/
+
+   .sideartikler-forbrug{
+     display: flex;
+   flex-direction: column;
+     border: none;
+    border-radius: 15px;
+    width: 300px;
+    height: auto;
+    transition: 0.3s ease;
+    justify-content: space-between;
+    background-color: #E9ECE4;
+    padding: 15px;
+    gap: 15px; 
+    box-sizing: border-box;
+    
+      
+ }
+  
+ 
+.sideartikler-forbrug img{
+     height: 200px;
+    width: auto;
+     border-radius: 10px;
+   object-fit: cover; 
+         
+}
+.forbrug-indhold{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.forbrug-indhold h2{
+        color: #000;
+    margin-top: 10px;
+    font-size: 25px;
+      text-align: center;
+
+    
+
+
+}
+.forbrug-indhold p{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    margin-top: 8px;
+
+}
+.forbrug-indhold a{
+    text-decoration: none;
+   align-self: flex-end;
+    padding-right: 10px;
+    font-size: 18px;
+    margin-top: auto;
+}
+.forbrug-indhold a:hover{
+    font-weight: bolder;
+    color: #0977ed;
+}
+.forbrug-indhold span{
+     display: inline-block;
+    padding: 5px 10px;
+    width: 100px;
+    height: 30px;
+    background-color:#9bbd8e;
+    color: #040000;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 20px;
+     margin-left: 15px;
+     margin-bottom: 10px;
+     margin-top: 10px;
+
+}
+
+/*-------  Få tips, guides og inspiration direkte i din indbakke ------------*/       
+
+ .opdater{
+    background-color: #346759;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    padding: 0 160px;
+
+ }
+  .emne-cindhold{
+    display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+  }
+ 
+
+  .emne-indhold h3{
+    font-size: 25px;
+    font-weight: bolder;
+    color: #f9f6f6;
+
+  }
+  .emne-indhold p{
+    font-size: 18px;
+    color: #f9f6f6;
+    
+     
+  }
+ 
+  /*.......... email og tilmeld ......*/
+    
+  /*.......... email og tilmeld ......*/
+    
+  .tilmeld{
+     display: flex;
+     
+     align-items: center;
+ 
+    box-sizing: border-box;
+   padding-left: 10px;
+     height: 50px;
+    width: 450px;
+    background-color: #f7f4f4;
+    border-radius: 50px;
+}   
+ 
+  
+ 
+ 
+    
+}
+    
+.tilmeld label{
+    width: 100%;
+    
+  
+}
+.tilmeld  input[type="email"]{
+    flex: 1;
+    
+    height: 48px;
+    width: auto;
+    
+}
+ .tilmeld  .knap{
+    
+    align-items: center;
+    flex: 0.5;
+    font-size: 18px;
+    
+    color: #ffffff;
+    background-color: #2D6354;
+    width: 200px;
+    height: 50px;
+    float: right;
+    border-radius: 0 15px 15px 0;
+
+ }
+ .tilmeld  .knap:hover{
+    font-weight: bolder;
+
+ }
+
+
+/* ------ de tre spar på  vandet, Skab mindre affald og brug naturen tips---*/
+
+
+
+.tiper{
+     display: flex;
+     flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+     justify-content: space-between;
+    padding: 0 20px;
+}
+.tiper h2{
+     font-size: 24px;
+     margin: 0;
+      
+}
+.tiper  a{
+    float: right;
+    text-decoration: none;
+    font-size: 16px;
+     
+   
+ }
+.tiper  a:hover{
+    font-weight: bolder;
+    color: #0977ed;
+ }
+
+.tip{
+    box-sizing: border-box;
+    background-color: #FAFAF7;
+    border: 0.5px #E9ECE4;
+    border-radius:10px ;
+    width: 340px;
+    height: 180px;
+     transition:0.3s ease;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    
+}
+
+.tip img{
+    height: 50%;
+    width: 100px;
+    border-radius: 100px;
+    display: block;
+    margin-right: 2px;
+    
+
+     
+}
+
+.tip-indhold{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+.tip-indhold h3{
+   
+    font-size: 20px;
+    color: #000;
+     text-align: center;
+
+
+}
+
+.tip-indhold h3 a{
+     font-size: 20px;
+    color: #000;
+   margin-bottom: 5px;
+  display: inline-block;
+ 
+}
+
+.tip-indhold  h3:hover{
+     font-weight: bolder;
+    transform: translateY(-5px);
+
+    
+   }
+  
+.tip-indhold p{
+    font-size:0.9rem;
+    color: #000;
+    line-height: 1.3;
+    text-align: center;
+    margin-right: 5px;
+    
+    
+}
+ 
+ 
+
+
+/* ------------- Footer -----------*/
+ .footer{
+    background-color: #1f614f ;
+    color: #fffcfc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25;
+    width: 100%;
+    height: 130px;
+    padding: 30px 80px;
+     
+ }
+
+  .footer-logo img{
+    height: 100px ;
+    width: auto;
+    display: block;
+
+ }
+ /* -------------- kontakt informationer -----*/
+ .footer-kontakt{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+
+ }
+.footer-kontakt h4{
+    margin: 0;
+    font-size: 25px;
+    white-space: nowrap;
+}
+.kontakt-linjer{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-right: 15px;
+}
+
+ .footer-kontakt p{
+    font-size: 16px;
+line-height: 1.2;
+ }
+
+ .footer-kontakt a{
+    color: #ffffff;
+    text-decoration: none;
+ }
+
+ .footer-kontakt a:hover{
+    text-decoration: underline;
+ }
+
+/* ------------ Følg Os ----------*/
+
+.Socialmedier{
+    margin: 0;
+    padding: 0;
+}
+
+.Socialmedier-indhold{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+ .Socialmedier-indhold h4{
+    flex-basis: 85%;
+     margin: 0 5 10;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 25px;
+    line-height: 0.25;
+    
+ }
+
+ .Socialmedier-indhold a{
+    display: inline-flex;
+ }
+ .Socialmedier-indhold img{
+    width:auto;
+    height: 45px;
+        transition: transform 0.3s ease;
+        
+ 
+  }
+ .Socialmedier-indhold a:hover img{
+     transform: translateY(-5px);
+
+ }
+
+ /*--------------------- Copyright --------------*/
+
+ .footer p{
+    margin: 0;
+    font-size: 16px;
+    white-space: nowrap;
+
+ }
+
+
+ 
