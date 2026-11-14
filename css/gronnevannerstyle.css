@@ -41,17 +41,28 @@ h1{
  }
 
  /* ----------------- header ----------*/
+  .logo{
+    display: flex;
+    justify-content: space-between;
+ }
  .logo img{
-     height:95px;
+     height:100px;
     width: auto;
     float: left;
-   padding-left: 25px;
+   
+   padding-left: 35px;
+   background-color: #ecefe9;
+   border-radius: 5px;
+   mask-image: linear-gradient(to left, transparent 1%, #13463F 25%);/* ...... for at slør banner billede kant ....*/
+ 
    }
+   
  .logo p{
+      align-items: center;
     color: #f2f8f7;
    text-decoration: none;
    font-family: Inter;
-   font-size: 18px;
+   font-size: 24px;
    font-weight: bold;
         padding: 10px;
      display: flex;
@@ -129,8 +140,7 @@ li a{
     height: 500px;
     display: flex;
     align-items: center;
-      
-   margin: 0 auto 30px auto;
+    margin: 0 auto 30px auto;
  
     
 }
@@ -158,20 +168,19 @@ li a{
     
 }
 
-.banner-indhold h1{
-    text-align: left;
+.banner-indhold span{
+     display: flex;
+   text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+   margin: 15px;
     
-     margin-bottom: 15px;
-      font-size: 5rem;
-    font-weight: bolder;
     
 }
-.banner-indhold h2{
+.banner-indhold h1{
     text-align: left;
-    font-size: 3rem;
-    font-weight: bold;
-   margin-bottom: 15px;
-    
+     margin-bottom: 15px;
+     font-weight: bolder;
 }
 
 .banner-indhold p{
@@ -205,10 +214,8 @@ li a{
     width: fit-content;
      
    
-
-
 }
- .inspireret-tips   a{
+ .inspireret-tips a{
     text-decoration: none;
       font-family: Inter;
     font-size: 24px;
@@ -217,9 +224,7 @@ li a{
     border: none;
      color: #f4f0f0;
       
-     
-
-
+   
 }
  .inspireret-tips   a:hover{
     font-weight: bolder;
@@ -236,8 +241,8 @@ li a{
     gap: 10px;
     flex-wrap: wrap;
     float: right;
-    gap: 25px;
-    margin: 15px 110px 35px auto;
+    gap: 15px;
+    margin: 15px 100px 15px 0;
 
 }
 
@@ -247,8 +252,7 @@ li a{
     
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
- 
+  
 }
 
 .ikon img{
@@ -260,9 +264,14 @@ li a{
     box-shadow: 2px 4px 8px #000000; 
     margin-bottom: 5px;
 
-
-     
+    
 }
+.ikon img:hover{
+    transform: translateY(-5px);
+     transition: 0.5s ease;
+
+}
+     
   
 .ikon p{
     font-size:12px;
@@ -271,17 +280,15 @@ li a{
     margin-top: 5px;
    margin-bottom: 10px;
    align-items: center;
-    
-
-}
+  }
  
  
  
 
                         /*-------- vigtiste artikler ---------*/
- .artikler{
+ .vigtiste-artikler{
     
-      width: 95%;
+      width: 100%;
     max-width: 1300px;
     margin: 0 25px;
     padding: 0 0 25px;
@@ -289,7 +296,7 @@ li a{
 
  } 
                        
-.artikler-header{
+.vigtiste-header{
     
     display: flex;
     justify-content: space-between;
@@ -299,14 +306,16 @@ li a{
       
 }
 
-.artikler-header h2{
+.vigtiste-header h2{
     font-family: Playfair Displayr;
-    font-size: 24px;
+   font-size: 2rem;
+    color: #000000;
+    
     margin: 25px 25px;
      
 }
 
-.artikler-header a{
+.vigtiste-header a{
     
     font-size: 16px ;
     text-decoration: none;
@@ -320,7 +329,7 @@ li a{
    padding-top: 5px;
            
 }
-.artikler-header a:hover{
+.vigtiste-header a:hover{
    font-size: large;
     font-weight: bolder;
          
@@ -332,40 +341,41 @@ li a{
 
 .artikler-flexbox{
     display: grid;
-    grid-template-columns: 1.2fr 2.5fr;
+    grid-template-columns: repeat(4,1fr);
     gap: 25px;
     width: 100%;
     margin-bottom: 25px;
-    align-items: start;
+     padding: 10px 40px;
+     box-sizing: border-box;
+     align-items: stretch;
 }
 
  
 /*.........  hjemmet, Transport, mad & indkøb  og forbrug ....*/
 
-.artikler-hjemmet{
+.flexbox-hjemmet{
+    display: flex;
+    flex-direction: column;
     grid-column: 1;
-     flex-direction: column;
+    grid-row: 1;
+   
     border-radius: 10px;
-     justify-content: space-between;
-     display: flex;
-     width: 400px;
+   
+     width: 100%;
+  max-width: 410px;
      height: auto;
    background-color: #F7F5EE;
    box-shadow: 0 4px 8px black;
   transition: 0.5s ease;
   box-sizing: border-box;
    flex-wrap: wrap;
-   padding: 15px;
+   padding: 5px;
        
 }
-.hjemmet-img{
-    height: 250px;
-    width: 100%;
-    
-}
  
-.hjemmet-img img{
-    height: 100%;
+ 
+.flexbox-hjemmet img{
+    height: auto;
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
@@ -427,33 +437,40 @@ li a{
 
 /*.......... sideartikler ...........*/
 .sideartikler{
-    display: grid;
-   grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+   height: 100%;    
     width: 100%;
+    display: flex;
+      
+    
+  
 }
+
 /*........ Transport ..........*/
 
 .sideartikler-Transport{
      display: flex;
-     flex-direction: column;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    width: 100%;
+    height: auto;
       border: none;
     border-radius: 15px;
-  width: 300px;
-    height: auto;
      transition: 0.3s ease;
-    justify-content: space-between;
-    background-color: #E9ECE4;
-    padding: 15px;
-    box-sizing: border-box;
     
+    background-color: #E9ECE4;
+    padding: 5px;
+    box-sizing: border-box;
       
  }
   
  
 .sideartikler-Transport img{
+         display: block;
+    align-items: center;
+    flex-shrink: 0;
      height: 200px;
-    width:100٪;
+    width: 100%;
     border-radius: 10px;
    object-fit: cover; 
 
@@ -463,31 +480,35 @@ li a{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+        
+
 }
 
 .Transport-indhold h2{
-        color: #000;
+         color: #000;
     margin-top: 10px;
     font-size: 25px;
-      text-align: center;
+       text-align: center;
+       display: flex;
+       align-items: center;
+       justify-content: center;
     
 
 }
 .Transport-indhold p{
-    text-decoration: none;
     color: #000;
     font-size: 18px;
-    margin-top: 8px;
+    margin: 10px;
     line-height: 1.2;
-
+    
+ 
 }
 .Transport-indhold a{
     text-decoration: none;
     align-self: flex-end;
-    float: right;
-    padding-right: 10px;
-    font-size: 18px;
-    margin-top: 10px;
+     font-size: 18px;
+    margin-top: auto;
+    padding: 0 1px 8px 0;
 }
 .Transport-indhold a:hover{
     font-weight: bolder;
@@ -495,96 +516,99 @@ li a{
 }
 .Transport-indhold span{
      display: inline-block;
-         padding: 5px 10px;
-    width: 120px;
+     align-self: flex-start;
+        padding: 5px 10px;
+      text-align: center;
+    width: auto;
+    min-width: 100px;
     height: 30px;
     background-color:#9bbd8e;
     color: #040000;
     border-radius: 50px;
     font-weight: bold;
     font-size: 20px;
-     margin-left: 15px;
-     margin-bottom: 10px;
-     margin-top: 10px;
+      margin: 15px;
 
 }
 
  /*................. Mad & Indkøb ..........  */
 
 .sideartikler-mad{
-     display: flex;
-   flex-direction: column;
- flex-wrap: wrap;
- justify-content: space-between;
+       display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    width: 100%;
+    height: auto;
       border: none;
     border-radius: 15px;
-   width: 100%;
-    height: auto;
-         transition: 0.3s ease;
-    background-color: #E9ECE4;
-    padding: 15px;
-    gap: 15px; 
-    box-sizing: border-box;
+     transition: 0.3s ease;
     
+    background-color: #E9ECE4;
+    padding: 5px;
+    box-sizing: border-box;
       
  }
   
- .sideartikler-mad-img img,
-.sideartikler-mad-img img{
+  
+.sideartikler-mad  img{
+     display: block;
+    align-items: center;
+    flex-shrink: 0;
      height: 200px;
     width: 100%;
-     border-radius: 10px;
+    border-radius: 10px;
    object-fit: cover; 
-
          
 }
 .mad-indhold{
-    display: flex;
+   display: flex;
     flex-direction: column;
-    flex-grow: 1;
+ 
 }
 
 .mad-indhold h2{
-            color: #000;
-    margin-bottom: 10px;
+       color: #000;
+    margin-top: 10px;
     font-size: 25px;
-      text-align: center;
+       text-align: center;
+       display: flex;
+       align-items: center;
+       justify-content: center;
 
 }
 .mad-indhold p{
-    text-decoration: none;
-    color: #000;
+     color: #000;
     font-size: 18px;
-    margin-top: 8px;
-    flex-wrap: wrap;
+    margin: 10px;
     line-height: 1.2;
-
+    
 }
 .mad-indhold a{
-    text-decoration: none;
-    align-items: flex-end;
-    float: right;
-    padding-right: 10px;
-    font-size: 18px;
-    margin-top: 18px;
+     text-decoration: none;
+    align-self: flex-end;
+     font-size: 18px;
+    margin-top: auto;
+    padding: 0 1px 8px 0;
 }
 .mad-indhold a:hover{
     font-weight: bolder;
     color: #0977ed;
 }
 .mad-indhold span{
-     display: inline-block;
-    padding: 5px 10px;
-    width: 155px;
+    display: inline-block;
+     align-self: flex-start;
+        padding: 5px 10px;
+      text-align: center;
+    width: auto;
+    min-width: 100px;
     height: 30px;
     background-color:#9bbd8e;
     color: #040000;
     border-radius: 50px;
     font-weight: bold;
     font-size: 20px;
-     margin-left: 15px;
-     margin-bottom: 10px;
-     margin-top: 10px;
+      margin: 15px;
 
 }
 
@@ -592,76 +616,89 @@ li a{
 
    .sideartikler-forbrug{
      display: flex;
-   flex-direction: column;
-     border: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+      border: none;
     border-radius: 15px;
-    width: 300px;
-    height: auto;
-    transition: 0.3s ease;
-    justify-content: space-between;
-    background-color: #E9ECE4;
-    padding: 15px;
-    gap: 15px; 
-    box-sizing: border-box;
+     transition: 0.3s ease;
     
+    background-color: #E9ECE4;
+    padding: 5px;
+    box-sizing: border-box;
       
  }
   
  
 .sideartikler-forbrug img{
+     display: block;
+    align-items: center;
+    flex-shrink: 0;
      height: 200px;
-    width: auto;
-     border-radius: 10px;
+    width:100٪;
+    border-radius: 10px;
    object-fit: cover; 
-         
+
+
 }
 .forbrug-indhold{
-    display: flex;
+   display: flex;
     flex-direction: column;
     flex-grow: 1;
+    
+   
 }
+
 
 .forbrug-indhold h2{
         color: #000;
     margin-top: 10px;
     font-size: 25px;
-      text-align: center;
-
-    
-
+       text-align: center;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+                   
 
 }
+
 .forbrug-indhold p{
-    text-decoration: none;
     color: #000;
     font-size: 18px;
-    margin-top: 8px;
+    margin: 10px;
+    line-height: 1.2;
 
 }
 .forbrug-indhold a{
-    text-decoration: none;
-   align-self: flex-end;
-    padding-right: 10px;
-    font-size: 18px;
+   text-decoration: none;
+    align-self: flex-end;
+     font-size: 18px;
     margin-top: auto;
+    padding: 0 1px 8px 0;
+
 }
 .forbrug-indhold a:hover{
     font-weight: bolder;
     color: #0977ed;
 }
 .forbrug-indhold span{
-     display: inline-block;
-    padding: 5px 10px;
-    width: 100px;
+    display: inline-block;
+    display: inline-block;
+     align-self: flex-start;
+        padding: 5px 10px;
+      text-align: center;
+    width: auto;
+    min-width: 100px;
     height: 30px;
     background-color:#9bbd8e;
     color: #040000;
     border-radius: 50px;
     font-weight: bold;
     font-size: 20px;
-     margin-left: 15px;
-     margin-bottom: 10px;
-     margin-top: 10px;
+      margin: 15px;
+    
 
 }
 
@@ -680,7 +717,7 @@ li a{
     padding: 0 160px;
 
  }
-  .emne-cindhold{
+  .emne-indhold{
     display: flex;
         flex-direction: column;
         gap: 5px;
@@ -688,65 +725,63 @@ li a{
   }
  
 
-  .emne-indhold h3{
+  .emne-indhold h2{
     font-size: 25px;
     font-weight: bolder;
     color: #f9f6f6;
-
   }
+
   .emne-indhold p{
     font-size: 18px;
     color: #f9f6f6;
-    
-     
+       
   }
  
-  /*.......... email og tilmeld ......*/
-    
-  /*.......... email og tilmeld ......*/
-    
-  .tilmeld{
-     display: flex;
      
-     align-items: center;
- 
-    box-sizing: border-box;
+  /*.......... email og tilmeld ......*/
+    
+ .tilmeld{
+     display: flex;
+          align-items: center;
+     box-sizing: border-box;
    padding-left: 10px;
      height: 50px;
     width: 450px;
     background-color: #f7f4f4;
     border-radius: 50px;
 }   
+
  
-  
- 
- 
-    
-}
     
 .tilmeld label{
-    width: 100%;
+    display: flex;
+    flex: 1;
+   height: 100%;
+   width: 100%;
+    align-items: center;
+   
     
-  
 }
 .tilmeld  input[type="email"]{
-    flex: 1;
+   flex: 1;
+     height: 100%;
+      width: auto;
+      border: none;
+      flex: content;
     
-    height: 48px;
-    width: auto;
-    
+          font-size: 15px;
 }
- .tilmeld  .knap{
-    
+ .tilmeld .knap{
     align-items: center;
-    flex: 0.5;
+    display: flex;
+ padding: 0 5px;
     font-size: 18px;
     
     color: #ffffff;
     background-color: #2D6354;
-    width: 200px;
-    height: 50px;
-    float: right;
+    width: auto;
+    height: 100%;
+   
     border-radius: 0 15px 15px 0;
 
  }
@@ -792,8 +827,9 @@ li a{
     background-color: #FAFAF7;
     border: 0.5px #E9ECE4;
     border-radius:10px ;
-    width: 340px;
-    height: 180px;
+    width: 100%;
+   max-width: 340px;
+    min-height: 180px;
      transition:0.3s ease;
     padding: 15px;
     display: flex;
@@ -861,14 +897,15 @@ li a{
 
 /* ------------- Footer -----------*/
  .footer{
+    box-sizing: border-box;
     background-color: #1f614f ;
     color: #fffcfc;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 25;
+    gap: 25px;
     width: 100%;
-    height: 130px;
+    
     padding: 30px 80px;
      
  }
@@ -883,11 +920,12 @@ li a{
  .footer-kontakt{
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: row;
     gap: 10px;
 
  }
-.footer-kontakt h4{
+.footer-kontakt h2{
     margin: 0;
     font-size: 25px;
     white-space: nowrap;
@@ -915,38 +953,41 @@ line-height: 1.2;
 
 /* ------------ Følg Os ----------*/
 
-.Socialmedier{
+.socialmedier{
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
-.Socialmedier-indhold{
+.socialmedier-indhold{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 10px;
 }
- .Socialmedier-indhold h4{
+ .socialmedier-indhold h2{
     flex-basis: 85%;
-     margin: 0 5 10;
+     
     font-size: 25px;
     font-weight: bold;
-    margin-top: 25px;
+    margin-top: 35px;
     line-height: 0.25;
     
  }
 
- .Socialmedier-indhold a{
+ .socialmedier-indhold a{
     display: inline-flex;
  }
- .Socialmedier-indhold img{
-    width:auto;
-    height: 45px;
+ .socialmedier-indhold img{
+      width:auto;
+    height: 35px;
         transition: transform 0.3s ease;
+        margin-bottom: 30px;
         
  
   }
- .Socialmedier-indhold a:hover img{
+ .socialmedier-indhold a:hover img{
      transform: translateY(-5px);
 
  }
@@ -954,11 +995,198 @@ line-height: 1.2;
  /*--------------------- Copyright --------------*/
 
  .footer p{
-    margin: 0;
-    font-size: 16px;
-    white-space: nowrap;
+     font-size: 16px;
+    white-space: normal;
 
  }
 
 
- 
+ /* ------ media query screen 768px----*/
+
+ @media screen and (max-width: 768px){
+    header{
+        flex-direction: column;
+        height: auto;
+        gap: 15px;
+    }
+    .logo{
+       justify-content: center;
+       align-items: center;
+    }
+    .logo img{
+        height: 60%;
+        width: 50%;
+        padding-left: 0;
+        mask-image: none;
+    }
+    .logo p{
+         
+        font-size: 20px;
+       justify-content: center;
+    }
+    nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    nav li{
+        float: none;
+        margin-right: 0;
+    }
+    .banner{
+        flex-direction: column;
+        height: auto;
+        width: 95%;
+    }
+    .banner img{
+        width: 100%;
+        height: 250px;
+        mask-image: none;
+    }
+    .banner-indhold{
+        position: static;
+        transform: none;
+        padding: 20px;
+
+    }
+    .inspireret-tips{
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+    .banner-indhold span{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .banner-indhold h1{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .banner-indhold p{
+        text-align: center;
+        margin-right: 0;
+    }
+
+    /* ------- ikoner ----*/
+    .ikoner{
+        float: none;
+        justify-content: center;
+       max-width: 100%;
+       width: 60%;
+        margin: 10px auto;
+    }
+
+    /* -------- vigtiste artikler ----*/
+
+    .vigtiste-artikler{
+        margin: 0;
+    }
+    .vigtiste-header{
+        flex-direction: column;
+        margin: 15px;
+        gap: 10px;
+    }
+    .vigtiste-header h2{
+        margin: 0;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .artikler-flexbox{
+        grid-template-columns: 1fr;
+        padding: 10px 15px;
+
+    }
+    .flexbox-hjemmet{
+        max-width: 100%;
+        width: 95%;
+    }
+
+    /* -----  sideartikler-Transport,  sideartikler-mad,   sideartikler-forbrug*/
+
+    .sideartikler{
+        flex-direction: column;
+        gap: 25px;
+    }
+    .sideartikler-Transport,
+     .sideartikler-mad, 
+      .sideartikler-forbrug{
+        
+        height: 100%;
+        max-width: 100%;
+
+      }
+      .sideartikler-Transport,
+     .sideartikler-mad, 
+      .sideartikler-forbrug img{
+        width: 100%;
+        height: 180px;
+      }
+      
+
+    /* ----- opdater og tilmeld ----*/
+
+      
+    .opdater{
+        flex-direction: column;
+        height: auto;
+        padding: 25px 20px;
+    }
+    .tilmeld{
+        width: 100%;
+        
+    }
+    .footer{
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+    .footer-kontakt{
+        flex-direction: column;
+    }
+    .footer p{
+        white-space: normal;
+    }
+    
+   
+    /*-----tiper ----*/
+
+    .tiper{
+        justify-content: center;
+
+    }
+    .tip{
+        max-width: 100%;
+    }
+
+    /* -----  Footer --- */
+
+    .footer{
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 15px;
+    }
+    .footer-kontakt{
+        flex-direction: column;
+    }
+    .kontakt-linjer{
+        margin: 0;
+    }
+    .socialmedier{
+        justify-content: center;
+    }
+    .socialmedier-indhold{
+         justify-content: center;
+    }
+     .socialmedier-indhold h2{
+        margin-top: 10px;
+        line-height: normal;
+     }
+      .socialmedier-indhold img{
+        margin-bottom: 10px;
+      }
+      .footer p{
+        white-space: normal;
+      }
+
+     }

@@ -46,18 +46,28 @@ h1{
  }
 
  /* ----------------- header ----------*/
+ .logo{
+    display: flex;
+    justify-content: space-between;
+ }
  .logo img{
-     height:95px;
+     height:100px;
     width: auto;
     float: left;
-   padding-left: 25px;
+   
+   padding-left: 35px;
+   background-color: #ecefe9;
+   border-radius: 5px;
+   mask-image: linear-gradient(to left, transparent 1%, #13463F 25%);/* ...... for at slør banner billede kant ....*/
+ 
    }
    
  .logo p{
+      align-items: center;
     color: #f2f8f7;
    text-decoration: none;
    font-family: Inter;
-   font-size: 18px;
+   font-size: 24px;
    font-weight: bold;
         padding: 10px;
      display: flex;
@@ -262,6 +272,7 @@ li a{
 
 .kort img{
     height: 100%;
+    max-width: 100%;
     width: auto;
     border-radius: 8px;
     display: block;
@@ -297,8 +308,8 @@ li a{
     color: #000;
     font-size: 1rem;
     text-decoration: none;
-    float: right;
-    font-size: 1rem;
+     align-self: flex-end;
+     
      
 }
 
@@ -331,6 +342,7 @@ li a{
 
 .artikler-header h2{
     margin: 25px 25px;
+    font-size: 2.5rem;
     
      
 }
@@ -362,10 +374,12 @@ li a{
 .artikler-flexbox{
     display: grid;
     grid-template-columns: 1fr 1fr 1.2fr;
+     justify-content: ;
     gap: 25px;
     width: 100%;
-    margin-bottom: 25px;
+   margin-bottom: 25px;
     align-items: start;
+    padding: 20px;
 }
 
  
@@ -462,13 +476,14 @@ li a{
 
 .sideartikler-fremtid{
  
-    display: flex;
+   display: flex;
     flex-direction: row;
     align-items: center;
      border: none;
     border-radius: 15px;
-    width: 500px;
-    height: 220px;
+    
+     width: 500px;
+     height: 220px;
     box-shadow: 0 4px 8px black;
     transition: 0.3s ease;
     justify-content: space-between;
@@ -476,7 +491,6 @@ li a{
     padding: 15px;
     gap: 15px; 
     box-sizing: border-box;
-    
       
  }
   
@@ -525,18 +539,21 @@ li a{
 
 .sideartikler-inspiration{
   display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
+    flex-direction:row;
+    
     align-items: center;
-    border: none;
+     border: none;
     border-radius: 15px;
-    width: 500px;
-    height: 210px;
+    
+     width: 500px;
+     height: 220px;
     box-shadow: 0 4px 8px black;
-    text-decoration: 0.3s ease;
-    background-color: #f7f5ee;
+    transition: 0.3s ease;
+    justify-content: space-between;
+    background-color: #c6d2b9;
     padding: 15px;
-     gap: 15px;
+    gap: 15px; 
+    box-sizing: border-box;
     
 
 }
@@ -548,6 +565,7 @@ li a{
      border-radius: 100%;
     margin-top: 1px;
     object-fit: cover;
+    flex-shrink: 0;
     
 }
 
@@ -582,6 +600,7 @@ li a{
         grid-column: 3;
         grid-row: 1/3;
     flex-direction: column;
+    display: flex;
     background-color: #13463F;
      color: #fffcfc;
     width: 350px;
@@ -672,45 +691,45 @@ li a{
     
   .tilmeld{
      display: flex;
-     
-     align-items: center;
- 
-    box-sizing: border-box;
+          align-items: center;
+     box-sizing: border-box;
    padding-left: 10px;
      height: 50px;
     width: 450px;
     background-color: #f7f4f4;
     border-radius: 50px;
 }   
+
  
-  
- 
- 
-    
-}
     
 .tilmeld label{
-    width: 100%;
+    display: flex;
+    flex: 1;
+   height: 100%;
+   width: 100%;
+    align-items: center;
+   
     
-  
 }
 .tilmeld  input[type="email"]{
-    flex: 1;
-    
-    height: 48px;
-    width: auto;
-    
+   flex: 1;
+     height: 100%;
+      width: auto;
+      flex: content;
+   
+        border: none;
+          font-size: 15px;
 }
- .tilmeld  .knap{
-    
+ .tilmeld .knap{
     align-items: center;
-    flex: 0.5;
+    display: flex;
+ padding: 5px;
     font-size: 18px;
     
     color: #ffffff;
     background-color: #2D6354;
-    width: 200px;
-    height: 50px;
+    width: auto;
+    height: 100%;
     float: right;
     border-radius: 0 15px 15px 0;
 
@@ -801,7 +820,7 @@ line-height: 1.2;
  }
  .socialmedier-indhold img{
     width:auto;
-    height: 45px;
+    height: 35px;
         transition: transform 0.3s ease;
         
  
@@ -820,5 +839,187 @@ line-height: 1.2;
 
  }
 
+/* ----- media query screen 769px----*/
+
+@media screen and ( max-width:768px){
+    img{
+max-width: 100%;
+    }
+    
+    h1{
+        font-size: 2rem;
+    }
+      header{
+        flex-direction: column;
+        height: auto;
+        gap: 15px;
+    }
+    .logo{
+       justify-content: center;
+       align-items: center;
+    }
+    .logo img{
+        height: 60%;
+        width: 50%;
+        padding-left: 0;
+        mask-image: none;
+    }
+    .logo p{
+         
+        font-size: 20px;
+       justify-content: center;
+    }
+    nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    nav li{
+        float: none;
+        margin-right: 0;
+    }
+    .banner{
+        flex-direction: column;
+        height: auto;
+        width: 95%;
+    }
+    .banner img{
+        width: 100%;
+        height: 250px;
+        mask-image: none;
+    }
+    .banner-indhold{
+        position: static;
+        transform: none;
+        padding: 20px;
+
+    }
+    .inspireret-tips{
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+    .banner-indhold span{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .banner-indhold h1{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .banner-indhold p{
+        text-align: center;
+        margin-right: 0;
+    }
+   
+    .udforsk-tips{
+        margin-left: 0;
+        
+    }
+    .artikler{
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+    .artikler-header{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .artikler-flexbox{
+        grid-template-columns: 1fr;
+        height: auto;
+        
+  
+        
+    }
+    .artikler-tema,
+     .sideartikler,
+      .statisk{
+     
+        grid-column: 1;
+      width: 50%; 
+              height: auto;
+
+    }
+     .tema-img{
+        height: auto;
+        width: 100%;
+       
+
+       
+     }
+   
+     .sideartikler-fremtid,
+      .sideartikler-inspiration{
+        height: auto;
+        flex-direction: column;
+        max-width: 100%;
+        
+        
+         
+     }
+     .sideartikler-fremtid img,
+      .sideartikler-inspiration img{
+         height: auto;
+         width: 100%;
+     }
+     .fremtid-indhold a,
+      .inspiration-indhold a{
+        float: none;
+        display: inline-block;
+        padding-right: 0;
+     }
+    
+      
+    
+     .statisk-item{
+        justify-content: flex-start;
+     }
+     
+    .opdater{
+        flex-direction: column;
+        height: auto;
+        padding: 25px 20px;
+    }
+    .tilmeld{
+        width: 100%;
+        
+    }
+    .footer{
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+    .footer-kontakt{
+        flex-direction: column;
+    }
+    .footer p{
+        white-space: normal;
+    }
+    .korter{
+      
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+    }
+    .kort{
+        height: auto;
+                flex-direction: column;
+     
+     }
+    .kort img{
+        height: 120px;
+        margin-right: 0;
+        margin-bottom: 10px;
+        object-fit: cover;
+    }
+    .kort a{
+        align-self: center;
+    }
+   
+
+}
 
  
+
