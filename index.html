@@ -2,20 +2,24 @@
 <html lang="da">
 <head>
     <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">    <title>Grøn Hverdag</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">   
+   <title>Grøn Hverdag</title>
     <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body>
 
+<!-- skip link -->
+ <a href="#main" class="skip-link"> Spring til hovedindhold</a>
     <!-- header logo og navigation -->
 
     <header>
          
               <div class="logo">
-       <a href="index.html">
-        <img src="images/logo1.png" alt="">
+       <a href="index.html">  
+        <img src="images/logo1.png" alt="Grøn Hverdag, gå til forsiden">
              </a>
-                    <p>Grøne Hverdag</p>
+                    <p>Grøn Hverdag</p>
 
           </div>
               
@@ -24,7 +28,7 @@
           <ul>
             
             <li><a href="index.html">Forside</a></li>
-            <li><a href="Grønnevanner.html">Grønne Vaner</a></li>
+            <li><a href="grønnevanner.html">Grønne Vaner</a></li>
              <li><a href="Kontaktos.html">Kontakt Os</a></li>
         </ul>
         
@@ -33,24 +37,24 @@
        <!-- navigation ikoner -->
 
        <div class="nav-action">
-       <button class="søg" aria-label="Søg på siden">
-      <img src="images/search.png" alt="søg ikon">
+       <button  type="button" class="søg" aria-label="søg på siden">
+      <img src="images/search.png" alt="">
      </button>
-      <img src="images/mand.png" alt="mand ikon">
+             <img src="images/mand.png" alt="mand ikon">
        </div>
     </header>
 
     <!-- main ======-->
 
-    <main>
+    <main id="main" tabindex="-1">
         
     <!-- banner  og banner-indhold======--> 
 
-        <section class="banner">
+        <section class="banner" aria-labelledby="banner-overskrift">
                         <img src="images/forside-banner.png" alt="en kvinde cykler med grøntsager">
 
             <div class="banner-indhold">
-                <h1>Små valg</h1>
+                <h1 id="banner-overskrift">Små valg</h1>
                 <span>Gør en stor forskel</span>
                 <p>Bæredygtiged i hverdagen er nemmere end du tror</p>
                 <p> Få inspiration og gode vaner til et grønnere liv</p>
@@ -59,7 +63,7 @@
             <div class="udforsk-tips">
                  
                 
-                     <a href="#" class="knap">Udforsk Tipse</a>
+                     <a href="Udforsk-tipse.html" class="knap">Udforsk Tipse</a>
                  
             </div>
              </div>
@@ -68,7 +72,7 @@
 
         <!-- =====  madspild genbrug grønne vaner og  korter inhold======-->
 
-          <section class="korter">
+          <section class="korter" aria-label="Udvalgte emner">
            
              <div class="kort">
                 <img src="images/gb.png" alt="genbrug od genanvendelse">
@@ -78,7 +82,7 @@
                 <h2>Genbrug</h2>
                 <p>Giv nyt liv til det gamle og find genbrugsvenlige alternativer</p>
 
-                <a href="#" class="knap">Læs Mere</a>  
+                <a href="genbrugtøj.html" class="knap" aria-label="Læs Mere om genbrug">Læs Mere</a>  
             </div>
             </div>
 
@@ -87,15 +91,15 @@
                  <div class="kort-indhold">   
                 <h2>Grønne Vaner</h2>
                 <p>Små ændringer i hverdagen kan gøre en forskel</p>
-                 <a href="#" class="knap">Læs Mere</a>
+                 <a href="småændring.html" class="knap" aria-label="Læs Mere om Grønne Vaner">Læs Mere</a>
             </div>
             </div>
                  <div class="kort">
-                <img src="images/madspand.jpg" alt="en spand indeholder madspild" >
+                <img src="images/madspand.jpg" alt="en spand indeholder madspild">
                  <div class="kort-indhold"> 
                 <h2>Mindre Madspild</h2>
                 <p>Lær hvordan du mindsker madspild og får mest ud af dine råvarer.</p>
-                 <a href="#" class="knap">Læs Mere</a>  
+                 <a href="madspild.html" class="knap" aria-label="Læs Mere om Mindre Madspild">Læs Mere</a>  
             </div>
             </div>
  
@@ -104,12 +108,12 @@
                     <!-------- populære artikler flexbox inhold--------->
 
 
-           <section class="artikler">
+           <section class="artikler" aria-labelledby="artikler-overskrift">
             
             <div class="artikler-header">
 
-                <h2>Populære artikler</h2>
-                <a href="#">Se alle artikler</a>
+                <h2 id="artikler-overskrift">Populære artikler</h2>
+                <a href="article.html">Se alle artikler</a>
             </div>
             
                          
@@ -122,14 +126,18 @@
                          <!----------- tema------------->       
 
             <div class="artikler-tema">
-              <div class="tema-img">
-                <img src="video/madspild1.gif" alt="animatiom om madspild">
-                </div>
+              <div class="tema-video">
+                 
+                  <video  controls preload="metadata" poster="images/madslipd1.png">
+                  <source src="video/madspild2.mp4" type="video/mp4">
+                  </video>
+       
+                  </div>
                 <div class="tema-indhold">
                 <span>Tema</span>
                 <h3>Madspild-sådan undgår du det</h3>
                 <p>Få konkrete tips at planlægge bedre, handle  smartere og bruge dine råvarer fuldt ud.</p>
-                    <a href="#">Læs Mere</a>         
+                    <a href="tema.html" aria-label="Læs Mere om Mindre Madspild-sådan undgår du det"> Læs Mere</a>         
               </div>
                </div>
                          
@@ -141,11 +149,11 @@
        <!----------------- fremtid-------------->
             <div class="sideartikler">
                 <div class="sideartikler-fremtid">
-                <img src="images/bllade.jpg" alt="Nogen holder et blad i parken.">
+                <img src="images/bllade.png" alt="Nogen holder et blad i parken.">
                  <div class="fremtid-indhold">
                  <h3>Sammen for en grønnere fremtid</h3>
                  <p>Små valg I hverdagen kan skabe store forandringer. Start i dag!</p>
-                  <a href="#">Bliv en del af forandringen</a>
+                  <a href="grønnere-fremtid.html">Bliv en del af forandringen</a>
             </div>
             </div>
 
@@ -158,7 +166,7 @@
 
                  <h3>inspiration</h3>
                  <p>Få ideer til en nemmere og mere bæredigtig hverdag</p>
-                  <a href="#">Læs Mere</a>
+                  <a href="ideer.html">Læs Mere</a>
 
              </div>
 
@@ -173,7 +181,7 @@
                 <h2>Sammen gør vi en forskel</h2>
 
                  <div class="statisk-item">
-                 <img src="images/Bæredygtige-Tips.png" alt="en ikon viser dygtug tips"  >
+                 <img src="images/Bæredygtige-Tips.png" alt=""  >
                  
                  <span>150+</span>
                  
@@ -202,7 +210,7 @@
                   <p>En grønnere hverdag er ikke perfekt i alt, men bedre i det, du kan</p>
              </div>
             </div>
-             </div>
+           
            
             
                         
@@ -210,7 +218,7 @@
 
            <!------------------ Opdateret dig hverdag ---------->
 
-            <section class="opdater">
+            <section class="opdater" aria-labelledby=" opdarter-hverdag">
                 <div class="emne">
                 <div class="emne-indhold">
                     <span>Opdateret dig hverdag</span>
@@ -221,7 +229,7 @@
              
             <!--------------- tilmedl form--------------->
                
-            <form action= "#" method="POST">
+            <form action= "#" method="POST" aria-labelledby="opdarter-hverdag">
                 <div class="tilmeld">
                 <label for="email-input">Din Email:</label>
                 <input type="email" id="email-input" name="email" required>

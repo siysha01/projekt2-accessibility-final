@@ -1,0 +1,607 @@
+:root{
+    --text-color: #000000;
+     --bg-color:#FAFAF7;
+     --grid-column: repeat(3, 1fr) ;
+     --information-kontakt: column;
+     font-family: 'Inter', 'Playfair Display', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial, sans-serif';
+      
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* .... general sætning */
+
+body{
+    
+background-color: #FAFAF7;
+ 
+}
+
+h1{
+    font-family: 'Playfair Display' ;
+    display: block;
+    flex-wrap: wrap;
+      font-size: 5rem;
+}
+ h2, h3, h4, h5{
+    font-family: 'Inter';
+    font-size: 25px;
+    padding-bottom: 1rem;
+ }
+
+ p, a{
+    font-size: 1rem;
+    
+ }
+
+ p{
+    
+    padding-bottom: 0.5rem;
+ }
+
+
+ 
+ span{
+    font-size: 15px;
+ }
+
+ button{
+    font-size: 1rem;
+ }
+ .img{
+    max-width: 100%;
+    
+ }
+ .knap, .social-link, button {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;   
+}
+ /* ---   skip link ---*/
+ .skip-link{
+    position: absolute;
+    top: -100px;
+    left: 10px;
+    z-index: 1000;
+    background-color: #ffffff;
+    color: #13463f;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;    
+ }
+ .skip-link:focus{
+    top: 10px;
+ }
+.main:focus{
+    outline: none;
+}
+ /* ----------------- header ----------*/
+ .logo{
+    display: flex;
+    justify-content: space-between;
+ }
+ .logo img{
+     height:100px;
+    width: auto;
+    float: left;
+   
+   padding-left: 35px;
+   background-color: #ecefe9;
+   border-radius: 5px;
+   mask-image: linear-gradient(to left, transparent 1%, #13463F 25%);/* ...... for at slør banner billede kant ....*/
+ 
+   }
+   
+ .logo p{
+      align-items: center;
+    color: #f2f8f7;
+   text-decoration: none;
+     font-family: 'Inter';
+   font-size: 24px;
+   font-weight: bold;
+        padding: 10px;
+     display: flex;
+     margin-top: 25px;
+   
+ }
+ 
+ 
+
+ header{
+    
+    background-color: #13463F;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    margin-bottom: 25px;
+    box-shadow: 0 1px 8px #000000;
+ }
+
+
+nav ul{
+    padding: 0;
+
+}
+ 
+nav li{
+    display: inline;
+    padding: 0 0.5rem;
+    float: left;
+    margin-right: 10px;
+}
+ 
+li a{
+    color: #e8efe2;
+     font-family: 'Inter';
+    font-size: large;
+    text-decoration: none;
+}
+
+
+ li a:hover{
+      font-weight: bolder;
+ }
+ 
+
+.nav-action{
+    display: flex;
+     align-items: center;
+    gap: 15px;
+}
+.nav-action .søg{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+      height: 25px;
+    width: 150px;
+    border-radius: 45px;
+ }
+
+.nav-action img{
+    height: 20px;
+    width: auto;
+    gap: 15px;
+    padding-right: 35px;
+}
+
+/* ------------------- main indhold --------------*/
+a{
+    text-decoration: none;
+}
+
+.artikler{
+     display: flex; 
+     grid-template-columns: 1fr,1fr ;
+    padding: 5px 15px;
+     align-items: flex-start;
+   justify-self:flex-end;
+     gap: 15px;
+    
+    
+}
+
+
+.artikle{
+    display: grid;
+    flex-direction: column;
+    grid-column: 1;
+  
+}
+.artikle-indhold{
+     gap: 25px;
+    width: 100%;
+    margin-bottom: 25px;
+      box-sizing: border-box;
+     align-items: flex-start;
+     background-color: #FAFAF7;
+}
+  
+.img img{
+    height: auto;
+      width: 100%;
+      max-width: 450px;
+      align-items: center;
+  padding-left:  0 50px;
+ 
+    
+}
+.img p{
+    box-sizing: border-box;
+    background-color: antiquewhite;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    color: #000000;
+    font-size: 10px;
+     padding: 5px 15px;
+
+}
+ 
+.video video{
+       height: 250px;
+    width: 100%;
+    max-width: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+   }
+ 
+
+
+
+ 
+.artikle  p{
+    font-family: 'inter';
+    margin: 10px;
+    font-size: 18px;
+    flex-wrap: wrap;
+
+
+}
+.artikle a{
+    font-size: 18px;
+    font-weight: bolder;
+    color: #000;
+    text-decoration: none;
+}
+.artikle a:hover{
+    color: #1e06d6;
+}
+  
+.artikle h1{
+    
+    font-size: 3rem;
+    text-align: center;
+    padding: 5px 25px;
+   
+    
+}
+.artikle h2{
+     font-size: 2rem;
+    margin: 5px;
+     padding: 5px 10px;
+   
+}
+
+.artikle h3{
+     font-size: 1rem;
+    margin: 5px;
+     padding: 5px 10px;
+    
+}
+
+/*-----   artikler-list ------*/
+
+.artikler-list{
+      
+     display: flex;
+    flex-direction: column;
+    grid-column: 2;
+   width: 100%;
+   max-width:300px;
+   box-sizing: border-box;
+    background-color: #04a9f0;
+     margin: 0 50px;
+}
+
+.artikler-list h2{
+     font-size: 24px;
+     font-weight: bolder;
+       color: #ffffff;
+    padding: 25px;
+}
+.artikler-list a{
+    text-decoration: none;
+    font-size: 18px;
+     color: #000000;
+    text-decoration: none;
+    padding: 15px;
+   
+}
+.artikler-list a:hover{
+    font-weight: bolder;
+        color: #ffffff;
+
+}
+
+ 
+ 
+
+
+/* ------------- Footer -----------*/
+ .footer{
+    box-sizing: border-box;
+    background-color: #1f614f ;
+    color: #fffcfc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    width: 100%;
+    
+    padding: 30px 80px;
+     
+ }
+
+  .footer-logo img{
+    height: 100px ;
+    width: auto;
+    display: block;
+
+ }
+ /* -------------- kontakt informationer -----*/
+ .footer-kontakt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+
+ }
+.footer-kontakt h2{
+    margin: 0;
+    font-size: 25px;
+    white-space: nowrap;
+}
+.kontakt-linjer{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-right: 15px;
+}
+
+ .footer-kontakt p{
+    font-size: 16px;
+line-height: 1.2;
+ }
+
+ .footer-kontakt a{
+    color: #ffffff;
+    text-decoration: none;
+ }
+
+ .footer-kontakt a:hover{
+    text-decoration: underline;
+ }
+
+/* ------------ Følg Os ----------*/
+
+.socialmedier{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.socialmedier-indhold{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+ .socialmedier-indhold h2{
+    flex-basis: 85%;
+     
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 35px;
+    line-height: 0.25;
+    
+ }
+
+ .socialmedier-indhold a{
+    display: inline-flex;
+ }
+ .socialmedier-indhold img{
+      width:auto;
+    height: 35px;
+        transition: transform 0.3s ease;
+        margin-bottom: 30px;
+        
+ 
+  }
+ .socialmedier-indhold a:hover img{
+     transform: translateY(-5px);
+
+ }
+
+ /*--------------------- Copyright --------------*/
+
+ .footer p{
+     font-size: 16px;
+    white-space: normal;
+
+ }
+
+ 
+  /*....... tilængelighed koder .....*/
+
+    a:focus-visible,
+ button:focus-visible,
+ input:focus-visible,
+ textarea:focus{
+    outline: 3px  solid #0b5fff;
+    outline-offset: 3px;
+ } 
+   header  a:focus-visible,
+ header button:focus-visible {
+    outline: 3px  solid #ffffff;
+ 
+  
+    
+ }
+ nav li a, .footer-kontakt a, .button{
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+ 
+ }
+  
+ p{
+    max-width: 70ch;
+ }
+
+
+
+ /* ------ media query screen 769px----*/
+
+ @media screen and (max-width: 769px){
+   
+    @media screen and ( max-width:769px){
+    img{
+max-width: 100%;
+    }
+    
+    h1{
+        font-size: 2rem;
+    }
+      header{
+         flex-direction: column;
+        height: auto;
+        padding: 10px;
+        gap: 10px;
+    }
+    .logo{
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+    }
+    .logo img{
+        height: 150px;
+        width: auto;
+        padding-left: 0;
+        mask-image: none;
+    }
+    .logo p{
+         
+        font-size: 20px;
+       justify-content: center;
+    }
+
+    nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    nav li{
+        float: none;
+        margin-right: 0;
+    }
+    .nav-action{
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+
+    /*... main indhold ----*/
+
+    .artikler{
+        flex-direction: column;
+        padding: 10px 15px;
+        gap: 25px;
+        box-sizing: border-box;
+
+    }
+
+    .artikle{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+    
+    }
+    .artikle-indhold{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 15px;
+    }
+
+    .artikle h1{
+        font-size: 1.5rem;
+        padding: 5px;
+    }
+      .artikle h2{
+        font-size: 1rem;
+        padding: 5px;
+    }
+    .artikle h3{
+        font-size: 1rem;
+        padding: 5px;
+
+    }
+
+    .img img{
+        max-width: 100%;
+        padding-left: 0;
+    }
+
+    .img p{
+        max-width: 100%;
+    }
+
+    /*----- artikler list ----*/
+
+    .artikler-list{
+        max-width: 100%;
+        margin: 0;
+        padding: 15px;
+     }
+
+     .artikler-list h2{
+        padding: 10px 15px;
+     }
+
+      .artikler-list a{
+        padding: 15px 20px;
+     }
+
+
+ 
+  
+    /* -----  Footer --- */
+
+    .footer{
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 30px 15px;
+        gap: 15px;
+    }
+    .footer-kontakt{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .kontakt-linjer{
+        margin: 0;
+        align-items: center;
+    }
+    .socialmedier{
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
+    .socialmedier-indhold{
+         justify-content: center;
+         text-align: center;
+    }
+     .socialmedier-indhold h2{
+        margin-top: 10px;
+        line-height: normal;
+        margin-top: 5px;
+     }
+      .socialmedier-indhold img{
+        margin-bottom: 10px;
+      }
+      .footer p{
+        white-space: normal;
+      }
+
+     }

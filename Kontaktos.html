@@ -8,24 +8,26 @@
 </head>
 <body>
 
+ <!-- skip link -->
+ <a href="#main" class="skip-link"> Spring til hovedindhold</a>
     <!-- header logo og navigation -->
 
     <header>
          
               <div class="logo">
-       <a href="index.html">
-        <img src="images/logo1.png" alt="">
+       <a href="index.html">  
+        <img src="images/logo1.png" alt="Grøn Hverdag, gå til forsiden">
              </a>
-                    <p>Grøne Hverdag</p>
+                    <p>Grøn Hverdag</p>
 
           </div>
               
-       <nav>
+       <nav aria-label="Hovednavigation">
     
           <ul>
             
             <li><a href="index.html">Forside</a></li>
-            <li><a href="Grønnevanner.html">Grønne Vaner</a></li>
+            <li><a href="grønnevanner.html">Grønne Vaner</a></li>
              <li><a href="Kontaktos.html">Kontakt Os</a></li>
         </ul>
         
@@ -34,25 +36,24 @@
        <!-- navigation ikoner -->
 
        <div class="nav-action">
-       <div class="søg">
-      <img src="images/search.png" alt="søg ikon">
-      </div>
-      <img src="images/mand.png" alt="mand ikon">
-       
+       <button  type="button" class="søg" aria-label="søg på siden">
+      <img src="images/search.png" alt="">
+     </button>
+             <img src="images/mand.png" alt="mand ikon">
        </div>
     </header>
 
     <!------------------------- main -------------------->
 
-    <main>
+    <main id="main" tabindex="-1">
         
     <!------------ banner  og banner-indhold--------------------------->
 
-        <section class="banner">
+        <section class="banner" aria-labelledby="banner-overskrift">
                         <img src="images/kontaktos.png" alt="en kvinde cykler med grøntsager">
 
             <div class="banner-indhold">
-                <h1>Kontakt Os</h1>
+                <h1 id="banner-overskrift">Kontakt Os</h1>
                  <p>Har du spørgsmål, ideer eller vil du være en del af Grøn Hvergag?"</p>
                 <p>Vi vil eleske at høre fra dig.</p>
                
@@ -66,7 +67,7 @@
               
 
                          <!--  information kort ----->
-             <section class="information-kontakt"> 
+             <section class="information-kontakt" aria-label="information-overskrift" > 
              <div class="information">
                  <div class="information-boks">
 
@@ -116,7 +117,7 @@
              </div>
             </div>
              </div>
-                          </div>
+               </div>
 
 
              <div class="kort">
@@ -135,7 +136,7 @@
                         <div class="form-rekke">
                          <div class="form-tekst">
                             <label for="navn">Navn:</label>
-                            <input id="navn" name="navn" translate="text">
+                            <input id="navn" name="navn" type="text">
 
                             </div>
                          
@@ -159,14 +160,14 @@
 
                          <!-- ==== besked tekst ===-->
 
-                          <!--  ==== Email====-->
+                          
                             <div class="form-tekst">
                             <label for="besked">Besked:</label>
                                 <textarea id="besked" name="besked"  rows="10" placeholder="">skriv din besked</textarea>
                             </div>
                             <div class="send-knap"> 
                             <button type="submit">send besked</button>
-                          </DIV>
+                            </div>
 
                     </form>
                     </DIV>
@@ -181,19 +182,17 @@
             
  
  
-
-    <!------------------- footer -------------->
-
-     <footer class="footer">
+ <!------------------- footer -------------->
+<footer class="footer">
         
          <div class="footer-logo">
-       <a href="index.html"><img src="images/logo1-footer.png" alt="logo"></a>
+       <a href="index.html"><img src="images/logo1-footer.png" alt="Grøne Hverdag footer Logo"></a>
        </div>
                 
         <div class="footer-kontakt">
-        <h4>Kontakt information:</h4>
+        <h2>Kontakt information:</h2>
         <div class="kontakt-linjer">
-        <p>Addresse : Havneparken 1, Kolding 6000</p>
+        <p>Adresse : Adresse... </p>
          <p>Email: <a href="mailto:kontakt@gronhverdag.dk">Send Email</a></p>
           <p>Telefon: <a href="tel:+451212XX">ring os: </a>+451212XX</p>
     </div>
@@ -201,17 +200,17 @@
      
      <!--------------------------- Social Medier indhold ------ -->
      
-     <section class="socialmedier">
+     <section class="socialmedier" aria-label="Social medier">
         <div class="socialmedier-indhold ">
-        <h4>Følg Os</h4>
-           <a href="https://facebook.com"><img src="images/facebook.png" alt="facebook"></a>
-       <a href="https://instagram.com"><img src="images/instagram.png" alt="instagram"></a>
-       <a href="https://youtube.com"><img src="images/youtube.png" alt="youtube"></a>
+        <h2>Følg Os</h2>
+           <a href="https://facebook.com" aria-label="Besøg vores Facebook-side"><img src="images/facebook.png" alt=""></a>
+       <a href="https://instagram.com" aria-label="Besøg vores Instagram-side"><img src="images/instagram.png" alt=""></a>
+       <a href="https://youtube.com" aria-label="Besøg vores Youtube kanal"><img src="images/youtube.png" alt=""></a>
        </div>
      </section>
      
      <p>© Grøn Hverdag 2026</p>
     </footer>
-
+    
 </body>
 </html>
